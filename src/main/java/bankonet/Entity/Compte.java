@@ -19,9 +19,6 @@ public abstract class Compte {
 
     private double solde;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="id_client")
-    @JsonIgnore
    @ManyToOne(cascade = CascadeType.ALL)
    @JoinColumn(name="id_client")
    @JsonIgnore
