@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 import java.util.List;
 
-@Entity
+//@Entity
 @Table(name="COMPTE")
 @MappedSuperclass
 public abstract class Compte {
@@ -19,9 +19,9 @@ public abstract class Compte {
 
     private double solde;
 
-   /* @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="id_client")
-    @JsonIgnore*/
+    @JsonIgnore
    @ManyToOne(cascade = CascadeType.ALL)
    @JoinColumn(name="id_client")
    @JsonIgnore
